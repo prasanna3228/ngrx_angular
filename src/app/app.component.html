@@ -1,0 +1,25 @@
+<h1>this is app component=parent component</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 border border-primary">
+      <h3>Without NgRx</h3>
+      <h5>parent Count:{{ count }}</h5>
+      <app-test
+        (increasecountEmit)="onIncrease()"
+        (decreasecountEmit)="onDecrease()"
+      >
+      </app-test>
+    </div>
+    <div class="col-md-6 border border-primary">
+      <h3>With NgRx</h3>
+      <h2>parent Count with ngrx==:{{ countNgrxNew }}</h2>
+      <h5>parent Count with ngrx:{{ countNgrx }}</h5>
+      <app-test-for-ngrx
+        (increaceCountNgrx)="inc()"
+        (decreaceCountNgrx)="dec()"
+      >
+      </app-test-for-ngrx>
+    </div>
+  </div>
+</div>
